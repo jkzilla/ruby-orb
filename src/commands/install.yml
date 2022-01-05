@@ -31,9 +31,7 @@ steps:
         curl -sSL "https://get.rvm.io" | bash -s stable
         # this should be what needs to be added to that $BASH_ENV since this is what's in bash_profile - i dont know when $HOME is set
         echo 'export PATH=$PATH:$HOME/.rvm/bin' >> $BASH_ENV
-        echo "source $HOME/.rvm/scripts/rvm" >> $BASH_ENV
         # this will source if anyone logs in noninteractively, nvm setup only adds nvm to the path, to get the rubygems later you need to source this again
-        echo "source $HOME/.rvm/scripts/rvm" >> ~/.bashrc
 
   - run:
       name: "Install Ruby v<< parameters.version >> via RVM"
