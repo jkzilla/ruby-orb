@@ -1,0 +1,13 @@
+description: "Say hi"
+
+parameters:
+  label:
+    default: "hi"
+    description: "say hi"
+    type: string
+
+steps:
+  - run:
+      name: <<parameters.label>>
+      command: |
+        puts -e <<parameters.label>>
